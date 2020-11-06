@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 10px;
+    font-family: 'Merienda', cursive;
+}
+
+nav {
+    max-width: 2400px;
+
+    background-color: #ffff;
+    margin: 30px auto;
+    text-align: right;
+}
+
+nav a {
+    display: inline-block;
+    font-size: 2.5rem;
+    font-family: 'Syne Mono',
+        monospace;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: rgba(14, 13, 13, 0.5);
+    padding: 10px;
+    margin: 0 20px;
+    letter-spacing: 2px;
+    margin-right: 30px;
+
+}
+
+nav a.wizyta {
+    font-size: 3rem;
+    border: 1px solid #999393;
+    padding: 10px 50px;
+    margin-right: 60px;
+}
+
+nav a:hover {
+    border-bottom: 1px solid rgb(19, 17, 17);
+    color: #000;
+    transition: 0.3s;
+}
+
+nav a.wizyta:hover {
+    background-color: rgb(16, 105, 4);
+    border-color: rgb(16, 105, 4);
+    color: rgb(172, 218, 6);
+
+}
+
+header {
+    background-image: url(kwiaty1.jpg);
+    height: 40vh;
+    background-size: cover;
+}
+
+header h1 {
+    font-size: 6rem;
+    color: whitesmoke;
+    text-align: center;
+    line-height: 40vh;
+    background-color: rgba(0, 0, 0, 50%);
+}
+
+main {
+    max-width: 2400px;
+    margin: 5vh auto;
+    font-size: 0;
+}
+
+.description {
+    font-size: 2.2rem;
+    text-align: center;
+    margin: 0 30px 50px 30px;
+    font-family: 'Architects Daughter',
+        cursive;
+    letter-spacing: 2px;
+
+}
+
+.zaproszenie {
+    font-size: 2.2rem;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.features {
+    background-color: rgba(153, 153, 153, 0.151);
+    padding: 30px 20px;
+}
+
+.feature {
+    display: inline-block;
+    width: 33.33%
+}
+
+.image {
+    height: 300px;
+    background-color: cadetblue;
+    margin: 0 auto;
+    display: block;
+
+}
+
+h2 {
+    font-size: 2rem;
+    text-align: center;
+    color: rgb(70, 70, 70);
+}
+
+
+footer {
+    background-color: #000;
+    color: aliceblue;
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 24px;
+}
