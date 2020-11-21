@@ -143,6 +143,11 @@ footer {
 	font-size: 24px;
 }
 
+.map {
+	height: 380px;
+	width: 100%;
+}
+
 @media (max-width: 1000px) {
 	.nav {
 		display: flex;
