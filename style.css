@@ -1,207 +1,202 @@
 * {
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 html {
-    font-size: 10px;
-    font-family: 'Merienda', cursive;
+	font-size: 10px;
+	font-family: 'Merienda', cursive;
 }
 
-
 .nav {
-    display: flex;
-    justify-content: flex-end;
-    position: fixed;
-    width: 100%;
-    background-color: transparent;
-    margin: 0 auto;
-    text-align: center;
+	display: flex;
+	justify-content: flex-end;
+	position: fixed;
+	width: 100%;
+	background-color: transparent;
+	margin: 0 auto;
+	text-align: center;
+	z-index: 999;
+	transition: all 0.2s ease;
 }
 
 .nav__link {
-    display: inline-block;
-    font-size: 2.5rem;
-    font-family: 'Syne Mono', monospace;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: whitesmoke;
-    padding: 10px;
-    margin: 20px 20px;
-    letter-spacing: 2px;
-
+	display: inline-block;
+	font-size: 2.5rem;
+	font-family: 'Syne Mono', monospace;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: whitesmoke;
+	padding: 10px;
+	margin: 20px 20px;
+	letter-spacing: 2px;
 }
 
 .nav__link--contact {
-    font-size: 3rem;
-    border: 1px solid #999393;
-    padding: 10px 70px;
-    margin-right: 60px;
+	font-size: 3rem;
+	border: 1px solid #999393;
+	padding: 10px 70px;
+	margin-right: 60px;
 }
 
-a:hover {
-    border-bottom: 1px solid rgb(172, 218, 6);
-    color: rgb(172, 218, 6);
-    transition: 0.3s;
+.nav__link:hover {
+	border-bottom: 1px solid rgb(172, 218, 6);
+	color: rgb(172, 218, 6);
+	transition: 0.3s;
 }
 
 .nav__link--contact:hover {
-    background-color: rgb(16, 105, 4);
-    border-color: rgb(16, 105, 4);
-    color: rgb(172, 218, 6);
-
+	background-color: rgb(16, 105, 4);
+	border-color: rgb(16, 105, 4);
+	color: rgb(172, 218, 6);
+}
+.nav__bgr {
+	background-color: #000;
+	box-shadow: 0 10px 6px -6px black;
 }
 
 header {
-
-    background-image: url(kwiaty1.jpg);
-    height: 40vh;
-    background-size: cover;
+	background-image: url(./img/kwiaty1.jpg);
+	height: 40vh;
+	background-size: cover;
 }
 
 header h1 {
-    font-size: 6rem;
-    color: whitesmoke;
-    text-align: center;
-    line-height: 40vh;
-    background-color: rgba(0, 0, 0, 50%);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-
+	font-size: 6rem;
+	color: whitesmoke;
+	text-align: center;
+	line-height: 40vh;
+	background-color: rgba(0, 0, 0, 50%);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
 .none {
-    display: none;
+	display: none;
 }
 
 main {
-    margin: 5vh auto;
+	margin: 5vh auto;
 }
 
 .description {
-    font-size: 2.2rem;
-    text-align: center;
-    margin: 0 30px 50px 30px;
-    font-family: 'Merienda',
-        cursive;
-    letter-spacing: 2px;
-    font-style: italic;
+	font-size: 2.2rem;
+	text-align: center;
+	margin: 0 30px 50px 30px;
+	font-family: 'Merienda', cursive;
+	letter-spacing: 2px;
+	font-style: italic;
 }
 
-
 .invitation {
-    font-size: 2.2rem;
-    text-align: center;
-    padding-bottom: 30px;
+	font-size: 2.2rem;
+	text-align: center;
+	padding-bottom: 30px;
 }
 
 .container1,
 .container2 {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
 
-    box-sizing: border-box;
-    width: 100%;
+	box-sizing: border-box;
+	width: 100%;
 }
 
 .features {
-    background-color: rgba(153, 153, 153, 0.151);
-    padding: 30px 20px;
+	background-color: rgba(153, 153, 153, 0.151);
+	padding: 30px 20px;
 }
-
 
 .feature {
-    margin: 20px;
+	margin: 20px;
 }
 
-
 .image {
-    height: auto;
-    background-color: cadetblue;
-    margin: 0 auto;
-    transition: all 0.5s ease-in-out;
-    width: 300px;
-
+	height: auto;
+	background-color: cadetblue;
+	margin: 0 auto;
+	transition: all 0.5s ease-in-out;
+	width: 300px;
 }
 
 .image:hover {
-    transform: scale(0.95);
-    opacity: 0.5;
+	transform: scale(0.95);
+	opacity: 0.5;
 }
 
 h2 {
-    font-size: 2rem;
-    text-align: center;
-    color: rgb(70, 70, 70);
+	font-size: 2rem;
+	text-align: center;
+	color: rgb(70, 70, 70);
 }
 
 footer {
-    background-color: #000;
-    color: aliceblue;
-    text-align: center;
-    padding: 2rem 0;
-    font-size: 24px;
+	background-color: #000;
+	color: aliceblue;
+	text-align: center;
+	padding: 2rem 0;
+	font-size: 24px;
 }
 
-@media(max-width:1000px) {
-    .nav {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        margin: 0;
-    }
+@media (max-width: 1000px) {
+	.nav {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		margin: 0;
+	}
 
-    .nav__link {
-        font-size: 2rem;
-        padding: 5px;
-        margin: 5px 5px;
-        letter-spacing: 1px;
+	.nav__link {
+		font-size: 2rem;
+		padding: 5px;
+		margin: 5px 5px;
+		letter-spacing: 1px;
+	}
 
-    }
+	.nav__link--contact {
+		font-size: 2rem;
+		padding: 5px 5px;
+	}
 
-    .nav__link--contact {
-        font-size: 2rem;
-        padding: 5px 5px;
-    }
+	header {
+		height: 20vh;
+	}
 
-    header {
-        height: 20vh;
-    }
+	header h1 {
+		font-size: 3rem;
+		line-height: 20vh;
+	}
 
-    header h1 {
-        font-size: 3rem;
-        line-height: 20vh;
-    }
-
-    main {
-        margin: 2vh auto;
-    }
+	main {
+		margin: 2vh auto;
+	}
 }
 
-@media(max-width: 630px) {
-    header h1 {
-        position: relative;
-        top: 50px;
-        background-color: transparent;
-    }
+@media (max-width: 630px) {
+	header h1 {
+		position: relative;
+		top: 50px;
+		background-color: transparent;
+	}
 
-    .none {
-        display: block;
-        position: absolute;
-        background-color: rgba(0, 0, 0, 50%);
-        height: 20vh;
-        width: 100%;
-    }
+	.none {
+		display: block;
+		position: absolute;
+		background-color: rgba(0, 0, 0, 50%);
+		height: 20vh;
+		width: 100%;
+	}
 
-    .nav {
-        z-index: 1;
-    }
+	.nav {
+		z-index: 1;
+	}
 
-    .nav__link--contact {
-        padding: 5px 200px;
-    }
+	.nav__link--contact {
+		padding: 5px 200px;
+	}
 }
