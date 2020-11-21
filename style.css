@@ -8,15 +8,15 @@ html {
     font-family: 'Merienda', cursive;
 }
 
+
 .nav {
+    display: flex;
+    justify-content: flex-end;
     position: fixed;
-    /* top: 0%; */
-    width: 2400px;
-    ;
+    width: 100%;
     background-color: transparent;
     margin: 0 auto;
-    text-align: right;
-    /* background-color: #1111; */
+    text-align: center;
 }
 
 .nav__link {
@@ -35,7 +35,7 @@ html {
 .nav__link--contact {
     font-size: 3rem;
     border: 1px solid #999393;
-    padding: 10px 50px;
+    padding: 10px 70px;
     margin-right: 60px;
 }
 
@@ -45,15 +45,15 @@ a:hover {
     transition: 0.3s;
 }
 
-.contact:hover {
+.nav__link--contact:hover {
     background-color: rgb(16, 105, 4);
     border-color: rgb(16, 105, 4);
     color: rgb(172, 218, 6);
+
 }
 
 header {
-    /* position: relative;
-    top: 60px; */
+
     background-image: url(kwiaty1.jpg);
     height: 40vh;
     background-size: cover;
@@ -65,26 +65,47 @@ header h1 {
     text-align: center;
     line-height: 40vh;
     background-color: rgba(0, 0, 0, 50%);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.none {
+    display: none;
 }
 
 main {
-    max-width: 2400px;
     margin: 5vh auto;
-    font-size: 0;
 }
 
 .description {
     font-size: 2.2rem;
     text-align: center;
     margin: 0 30px 50px 30px;
-    font-family: 'Architects Daughter', cursive;
+    font-family: 'Merienda',
+        cursive;
     letter-spacing: 2px;
+    font-style: italic;
 }
 
-.zaproszenie {
+
+.invitation {
     font-size: 2.2rem;
     text-align: center;
     padding-bottom: 30px;
+}
+
+.container1,
+.container2 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+    width: 100%;
 }
 
 .features {
@@ -92,16 +113,24 @@ main {
     padding: 30px 20px;
 }
 
+
 .feature {
-    display: inline-block;
-    width: 33.33%;
+    margin: 20px;
 }
 
+
 .image {
-    height: 300px;
+    height: auto;
     background-color: cadetblue;
     margin: 0 auto;
-    display: block;
+    transition: all 0.5s ease-in-out;
+    width: 300px;
+
+}
+
+.image:hover {
+    transform: scale(0.95);
+    opacity: 0.5;
 }
 
 h2 {
@@ -116,4 +145,63 @@ footer {
     text-align: center;
     padding: 2rem 0;
     font-size: 24px;
+}
+
+@media(max-width:1000px) {
+    .nav {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 0;
+    }
+
+    .nav__link {
+        font-size: 2rem;
+        padding: 5px;
+        margin: 5px 5px;
+        letter-spacing: 1px;
+
+    }
+
+    .nav__link--contact {
+        font-size: 2rem;
+        padding: 5px 5px;
+    }
+
+    header {
+        height: 20vh;
+    }
+
+    header h1 {
+        font-size: 3rem;
+        line-height: 20vh;
+    }
+
+    main {
+        margin: 2vh auto;
+    }
+}
+
+@media(max-width: 630px) {
+    header h1 {
+        position: relative;
+        top: 50px;
+        background-color: transparent;
+    }
+
+    .none {
+        display: block;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 50%);
+        height: 20vh;
+        width: 100%;
+    }
+
+    .nav {
+        z-index: 1;
+    }
+
+    .nav__link--contact {
+        padding: 5px 200px;
+    }
 }
