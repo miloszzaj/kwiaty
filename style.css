@@ -147,7 +147,28 @@ footer {
 	height: 380px;
 	width: 100%;
 }
+.popup {
+	background-color: black;
+	color: white;
+	border-radius: 5px;
+	padding: 0.5rem;
+	font-size: 1.3rem;
+}
 
+.popup:after {
+	position: absolute;
+	z-index: 1;
+	display: block;
+	width: 0;
+	height: 0;
+	border: 5px solid transparent;
+	content: '';
+	top: 50%;
+	right: 100%;
+	transform: translateY(-50%);
+	border-left-width: 0;
+	border-right-color: rgba(0, 0, 0, 0.8);
+}
 @media (max-width: 1000px) {
 	.nav {
 		display: flex;

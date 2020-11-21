@@ -1,64 +1,66 @@
 //zmiana koloru nav bar po scrollu
 const navBar = document.querySelector('.nav');
 const addNavbarBgrColor = () => {
-	// console.log(`win`, window.screenY);
-
 	if (window.scrollY > 100) {
 		navBar.classList.add('nav__bgr');
-		console.log(`win`, window.scrollY);
 	}
 	if (window.scrollY < 100) {
 		navBar.classList.remove('nav__bgr');
-		console.log(`win`, window.scrollY);
 	}
 };
 
 window.addEventListener('scroll', addNavbarBgrColor);
 
 // map
+const element = document.getElementById('popup');
 
-const map = new ol.Map({
-	target: 'map',
-	layers: [
-		new ol.layer.Tile({
-			source: new ol.source.OSM(),
+const init = () => {
+	const map = new ol.Map({
+		view: new ol.View({
+			center: [2258840.95146215, 7014873.172806342],
+			zoom: 16,
+			minZoom: 4,
 		}),
-	],
-	view: new ol.View({
-		center: ol.proj.fromLonLat([20.291250542460087, 53.171918057293034]),
-		zoom: 17,
-	}),
-});
-const iconFeature = new ol.Feature({
-	geometry: new Point([0, 0]),
-	name: 'Null Island',
-	population: 4000,
-	rainfall: 500,
-});
-
-var element = document.getElementById('popup');
-var popup = new ol.Overlay({
-	element: element,
-	positioning: 'center',
-	stopEvent: false,
-	offset: [0, -50],
-});
-map.addOverlay(popup);
-
-map.on('click', function (evt) {
-	var feature = map.forEachFeatureAtPixel(evt.pixel, function (feature) {
-		return feature;
+		layers: [
+			new ol.layer.Tile({
+				source: new ol.source.OSM(),
+			}),
+		],
+		target: 'mapOSM',
 	});
-	if (feature) {
-		var coordinates = feature.getGeometry().getCoordinates();
-		popup.setPosition(coordinates);
-		$(element).popover({
-			placement: 'top',
-			html: true,
-			content: feature.get('name'),
-		});
-		$(element).popover('show');
-	} else {
-		$(element).popover('dispose');
-	}
-});
+
+	const popup = new ol.layer.Vector({
+		source: new ol.source.Vector({
+			features: [
+				new ol.Feature({
+					geometry: new ol.geom.Point(ol.proj.fromLonLat([20.291264854716047, 53.17193059044489])),
+				}),
+			],
+		}),
+	});
+	map.addLayer(popup);
+
+	const container = document.getElementById('popup');
+	const content = document.getElementById('popup-content');
+	const closer = document.getElementById('popup-closer');
+
+	const overlay = new ol.Overlay({
+		element: container,
+		autoPan: true,
+		autoPanAnimation: {
+			duration: 250,
+		},
+	});
+	closer.onclick = function () {
+		overlay.setPosition(undefined);
+		closer.blur();
+		return false;
+	};
+	content.innerText = 'Tutaj Mnie znajdziesz';
+	overlay.setPosition(ol.proj.fromLonLat([20.29139091852625, 53.172160499287564]));
+	map.addOverlay(overlay);
+};
+
+window.onload = init;
+// 53.17198364644101, 20.291243397046223;
+53.172160499287564, 20.29139091852625;
