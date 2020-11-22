@@ -5,78 +5,288 @@
 
 html {
 	font-size: 10px;
-	font-family: 'Merienda', cursive;
+	font-family: 'Merienda', serif;
 }
 
 .nav {
-	display: flex;
-	justify-content: flex-end;
+	background-color: transparent;
+	/* box-shadow: 3px 3px 4px 0 rgba(0, 0, 0, .2); */
 	position: fixed;
 	width: 100%;
-	background-color: transparent;
-	margin: 0 auto;
-	text-align: center;
-	z-index: 999;
-	transition: all 0.2s ease;
+	z-index: 3;
+}
+
+.menu {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	overflow: hidden;
+	background-color: white;
 }
 
 .nav__link {
-	display: inline-block;
-	font-size: 2.5rem;
-	font-family: 'Syne Mono', monospace;
-	text-transform: uppercase;
+	display: block;
+	padding: 20px;
+	border-right: 1px solid #aaa;
 	text-decoration: none;
-	color: whitesmoke;
-	padding: 10px;
-	margin: 20px 20px;
-	letter-spacing: 2px;
-}
-
-.nav__link--contact {
-	font-size: 3rem;
-	border: 1px solid #999393;
-	padding: 10px 70px;
-	margin-right: 60px;
 }
 
 .nav__link:hover {
-	border-bottom: 1px solid rgb(172, 218, 6);
-	color: rgb(172, 218, 6);
-	transition: 0.3s;
+	background-color: #ddd;
 }
 
-.nav__link--contact:hover {
-	background-color: rgb(16, 105, 4);
-	border-color: rgb(16, 105, 4);
-	color: rgb(172, 218, 6);
-}
-.nav__bgr {
-	background-color: #000;
-	box-shadow: 0 10px 6px -6px black;
-}
-
-header {
-	background-image: url(./img/kwiaty1.jpg);
-	height: 40vh;
-	background-size: cover;
+.nav .logo {
+	float: left;
+	display: block;
+	font-size: 2em;
+	display: inline-block;
+	padding: 10px 20px;
+	width: 200px;
 }
 
-header h1 {
-	font-size: 6rem;
-	color: whitesmoke;
-	text-align: center;
-	line-height: 40vh;
-	background-color: rgba(0, 0, 0, 50%);
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
+.nav .menu {
+	clear: both;
+	max-height: 0;
+	transition: max-height .2s ease-out;
 }
+
+.menu-icon {
+	padding: 28px 20px;
+	position: relative;
+	float: right;
+	cursor: pointer;
+}
+
+.menu-icon .nav-icon {
+	background-color: #333;
+	display: block;
+	height: 2px;
+	width: 18px;
+	position: relative;
+	transition: background .2s ease-out;
+}
+
+.menu-icon .nav-icon:before {
+	background-color: #333;
+	content: "";
+	display: block;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	transition: all .2s ease-out;
+	top: -5px;
+}
+
+.menu-icon .nav-icon:after {
+	background-color: #333;
+	content: "";
+	display: block;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	transition: all .2s ease-out;
+	top: 5px;
+}
+
+.menu-btn {
+	display: none;
+}
+
+.menu-btn:checked~.menu {
+	max-height: 240px;
+}
+
+
+.menu-btn:checked~.menu-icon .nav-icon {
+	background-color: transparent;
+}
+
+.menu-btn:checked~.menu-icon .nav-icon::before {
+	transform: rotate(-45deg);
+	top: 0;
+}
+
+.menu-btn:checked~.menu-icon .nav-icon::after {
+	transform: rotate(45deg);
+	top: 0;
+}
+
+
+@media(min-width:400px) {
+
+	/* .nav .logo {
+		display: none;
+	} */
+
+	.menu li {
+		float: left;
+	}
+
+	.nav__link {
+		padding: 20px 30px;
+	}
+
+	.menu {
+		clear: none;
+		float: right;
+		max-height: none;
+	}
+
+	.menu-icon {
+		display: none;
+	}
+
+	/*
+	.nav {
+		background-color: orange;
+		box-shadow: 3px 3px 4px 0 rgba(0, 0, 0, .2);
+		position: fixed;
+		width: 100%;
+		z-index: 3;
+		display: flex;
+	}
+
+	.menu {
+		display: flex;
+		height: 60px;
+	}
+
+	.menu-btn:not(:checked) .menu {
+		display: flex;
+		height: 60px;
+	}
+
+	.nav .logo {
+		display: none;
+
+	}
+
+
+	.menu-btn:checked~.menu-icon .nav-icon {
+		display: none;
+
+	}
+
+	.menu-btn:checked~.menu-icon .nav-icon::before {
+		display: none;
+	}
+
+	.menu-btn:checked~.menu-icon .nav-icon::after {
+		display: none;
+	}*/
+}
+
+/*
+.nav__link {
+	display: none;
+}
+
+.nav__link:hover {
+	display: none;
+}
+
+
+
+.nav .menu {
+	cdisplay: none;
+}
+
+.menu-icon {
+	display: none;
+}
+
+.menu-icon .nav-icon {
+	display: none;
+}
+
+.menu-icon .nav-icon:before {
+	display: none;
+}
+
+.menu-icon .nav-icon:after {
+	display: none;
+}
+
+
+
+.menu-btn:checked~.menu {
+	display: none;
+}
+
+
+}
+
+	.nav {
+		display: flex;
+		justify-content: flex-end;
+		position: fixed;
+		width: 100%;
+		background-color: transparent;
+		margin: 0 auto;
+		text-align: center;
+		z-index: 999;
+		transition: all 0.2s ease;
+	}
+
+	.nav__link {
+		display: inline-block;
+		font-size: 2.5rem;
+		font-family: 'Syne Mono', monospace;
+		text-transform: uppercase;
+		text-decoration: none;
+		color: whitesmoke;
+		padding: 10px;
+		margin: 20px 20px;
+		letter-spacing: 2px;
+	}
+
+	.nav__link--contact {
+		font-size: 3rem;
+		border: 1px solid #999393;
+		padding: 10px 70px;
+		margin-right: 60px;
+	}
+
+	.nav__link:hover {
+		border-bottom: 1px solid rgb(172, 218, 6);
+		color: rgb(172, 218, 6);
+		transition: 0.3s;
+	}
+
+	.nav__link--contact:hover {
+		background-color: rgb(16, 105, 4);
+		border-color: rgb(16, 105, 4);
+		color: rgb(172, 218, 6);
+	}
+
+	.nav__bgr {
+		background-color: #000;
+		box-shadow: 0 10px 6px -6px black;
+	}
+
+	header {
+		background-image: url(./img/kwiaty1.jpg);
+		height: 40vh;
+		background-size: cover;
+	}
+
+	header h1 {
+		font-size: 6rem;
+		color: whitesmoke;
+		text-align: center;
+		line-height: 40vh;
+		background-color: rgba(0, 0, 0, 50%);
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}*/
+
 
 .none {
 	display: none;
 }
 
-main {
+.main {
 	margin: 5vh auto;
 }
 
@@ -86,7 +296,6 @@ main {
 	margin: 0 30px 50px 30px;
 	font-family: 'Merienda', cursive;
 	letter-spacing: 2px;
-	font-style: italic;
 }
 
 .invitation {
@@ -143,86 +352,90 @@ footer {
 	font-size: 24px;
 }
 
-.map {
-	height: 380px;
-	width: 100%;
-}
-.popup {
-	background-color: black;
-	color: white;
-	border-radius: 5px;
-	padding: 0.5rem;
-	font-size: 1.3rem;
-}
-
-.popup:after {
-	position: absolute;
-	z-index: 1;
-	display: block;
-	width: 0;
-	height: 0;
-	border: 5px solid transparent;
-	content: '';
-	top: 50%;
-	right: 100%;
-	transform: translateY(-50%);
-	border-left-width: 0;
-	border-right-color: rgba(0, 0, 0, 0.8);
-}
-@media (max-width: 1000px) {
-	.nav {
-		display: flex;
-		justify-content: center;
-		flex-wrap: wrap;
-		margin: 0;
-	}
-
-	.nav__link {
-		font-size: 2rem;
-		padding: 5px;
-		margin: 5px 5px;
-		letter-spacing: 1px;
-	}
-
-	.nav__link--contact {
-		font-size: 2rem;
-		padding: 5px 5px;
-	}
-
-	header {
-		height: 20vh;
-	}
-
-	header h1 {
-		font-size: 3rem;
-		line-height: 20vh;
-	}
-
-	main {
-		margin: 2vh auto;
-	}
-}
-
-@media (max-width: 630px) {
-	header h1 {
-		position: relative;
-		top: 50px;
-		background-color: transparent;
-	}
-
-	.none {
-		display: block;
-		position: absolute;
-		background-color: rgba(0, 0, 0, 50%);
-		height: 20vh;
+/* 
+	.map {
+		height: 380px;
 		width: 100%;
 	}
 
-	.nav {
-		z-index: 1;
+	.popup {
+		background-color: black;
+		color: white;
+		border-radius: 5px;
+		padding: 0.5rem;
+		font-size: 1.3rem;
 	}
 
-	.nav__link--contact {
-		padding: 5px 200px;
+	.popup:after {
+		position: absolute;
+		z-index: 1;
+		display: block;
+		width: 0;
+		height: 0;
+		border: 5px solid transparent;
+		content: '';
+		top: 50%;
+		right: 100%;
+		transform: translateY(-50%);
+		border-left-width: 0;
+		border-right-color: rgba(0, 0, 0, 0.8);
 	}
-}
+
+
+	@media (max-width: 1000px) {
+		.nav {
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			margin: 0;
+		}
+
+		.nav__link {
+			font-size: 2rem;
+			padding: 5px;
+			margin: 5px 5px;
+			letter-spacing: 1px;
+		}
+
+		.nav__link--contact {
+			font-size: 2rem;
+			padding: 5px 5px;
+		}
+
+		header {
+			height: 20vh;
+		}
+
+		header h1 {
+			font-size: 3rem;
+			line-height: 20vh;
+		}
+
+		main {
+			margin: 2vh auto;
+		}
+	}
+
+	@media (max-width: 630px) {
+		header h1 {
+			position: relative;
+			top: 50px;
+			background-color: transparent;
+		}
+
+		.none {
+			display: block;
+			position: absolute;
+			background-color: rgba(0, 0, 0, 50%);
+			height: 20vh;
+			width: 100%;
+		}
+
+		.nav {
+			z-index: 1;
+		}
+
+		.nav__link--contact {
+			padding: 5px 200px;
+		}
+	} */
