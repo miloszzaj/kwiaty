@@ -9,11 +9,14 @@
     <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.4.3/build/ol.js"></script>
     <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.4.3/css/ol.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
     <link href="https://fonts.googleapis.com/css2?family=Merienda&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Xanh+Mono:ital@0;1&display=swap" rel="stylesheet">
+
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -38,46 +41,126 @@
         <section class="features">
             <p class="invitation">
                 Zapraszam do obejrzenia fotogalerii moich kwiatów</p>
-            <div class="container1">
-                <div class="feature">
-                    <a href="#"><img class="image" src="./img/chryz.jpg" alt="chryzantemy"> </a>
-                    <h2>
-                        Chryzantemy złociste
-                    </h2>
-                </div>
-                <div class="feature">
-                    <a href="#"><img class="image" src="./img/bratki.jpg" alt="bratki"></a>
-                    <h2>
-                        Bratki
-                    </h2>
-                </div>
-                <div class="feature">
-                    <a href="#"> <img class="image" src="./img/cactus.jpg" alt="cactus"></a>
-                    <h2>
-                        Kaktusy
-                    </h2>
+            <div class="container page-top">
+                <div class="row" id="gallery" data-toggle=”modal” data-target=”#exampleModal”>
+                    <div class="col-6 col-md-4 col-lg-3 mr-4 mb-4 img-thumbnail" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal" data-bs-whatever="@mdo">
+                        <a href="#" rel="ligthbox"><img src="./img/chryz.jpg" data-target=”#carouselExample”
+                                data-slide-to="0" class="w-100 zoom
+                                img-fluid" alt=" chryzantemy">
+                        </a>
+                        <h2>
+                            Chryzantemy złociste
+                        </h2>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 mr-4 mb-4  img-thumbnail">
+                        <a href="#" class="fancybox" rel="ligthbox"><img src="./img/bratki.jpg"
+                                data-target=”#carouselExample” data-slide-to="2" class="w-100 zoom img-fluid "
+                                alt="bratki"></a>
+                        <h2>
+                            Bratki
+                        </h2>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 mr-4 mb-4  img-thumbnail">
+                        <a href="#" class="fancybox" rel="ligthbox"> <img src="./img/cactus.jpg"
+                                data-target=”#carouselExample” data-slide-to="3" class="w-100 zoom img-fluid "
+                                alt="cactus"></a>
+                        <h2>
+                            Kaktusy
+                        </h2>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-3 mr-4 mb-4  img-thumbnail">
+                        <a href="#" class="fancybox" rel="ligthbox"><img src="./img/aksam.jpg"
+                                data-target=”#carouselExample” data-slide-to="4" class="w-100 zoom img-fluid "
+                                alt="aksamitka"> </a>
+                        <h2>
+                            Aksamitki </h2>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 mr-4 mb-4  img-thumbnail">
+                        <a href="#" class="fancybox" rel="ligthbox"><img src="./img/chaber.jpg"
+                                data-target=”#carouselExample” data-slide-to="5" class="w-100 zoom img-fluid "
+                                alt="chaber"></a>
+                        <h2> Chabry
+                        </h2>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 mr-4 mb-4  img-thumbnail">
+                        <a href="#" class="fancybox" rel="ligthbox"> <img src="./img/dalie.jpg"
+                                data-target=”#carouselExample” data-slide-to="6" class="w-100 zoom img-fluid "
+                                alt="cactus"></a>
+                        <h2>
+                            Dalie
+                        </h2>
+                    </div>
                 </div>
             </div>
-            <div class="container2">
-                <div class="feature">
-                    <a href="#"><img class="image" src="./img/aksam.jpg" alt="aksamitka"> </a>
-                    <h2>
-                        Aksamitki </h2>
-                </div>
-                <div class="feature">
-                    <a href="#"><img class="image" src="./img/chaber.jpg" alt="chaber"></a>
-                    <h2>
-                        Chabry
-                    </h2>
-                </div>
-                <div class="feature">
-                    <a href="#"> <img class="image" src="./img/dalie.jpg" alt="cactus"></a>
-                    <h2>
-                        Dalie
-                    </h2>
+            </div>
+
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                data-bs-whatever="@mdo">Open modal for @mdo</button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                data-bs-whatever="@fat">Open modal for @fat</button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                data-bs-whatever="@getbootstrap">Open modal for @getbootstrap</button>
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
+                                <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
+                                <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="carousel-item ">
+                                    <img src="./img/dalie.jpg" class="d-block w-100" alt="...">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5 class="display-2" +>First slide label</h5>
+                                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="./img/chaber.jpg" class="d-block w-100" alt="...">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5 class="display-2">Second slide label</h5>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item active">
+                                    <img src="./img/cactus.jpg" class="d-block w-100" alt="...">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h1 class="display-2">Cactus</h1>
+                                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleCaptions" role="button"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
             </div>
+            </div>
+            <div class="container h-50">
+
+
+
+
+
+
+
+
 
         </section>
     </main>
@@ -94,6 +177,13 @@
     <footer>&copy; Ogrodnictwo Tom C.</footer>
 
     <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+        integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous">
+    </script>
 </body>
+
 
 </html>
