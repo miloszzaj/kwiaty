@@ -6,6 +6,8 @@
 html {
 	font-size: 10px;
 	font-family: 'Merienda', cursive;
+	background-color: #FCFAF7;
+
 }
 
 .nav {
@@ -27,7 +29,7 @@ html {
 	text-transform: uppercase;
 	text-decoration: none;
 	color: whitesmoke;
-	padding: 2px;
+	padding: 4px 6px;
 	margin: 20px 5px;
 	letter-spacing: 2px;
 }
@@ -83,80 +85,144 @@ header h1 {
 
 main {
 	margin: auto;
-
 }
-
-.description {
-	font-size: 2.2rem;
-	text-align: center;
-	padding: 15px 30px 40px;
-	margin: 0;
-	font-family: 'Merienda', cursive;
-	letter-spacing: 2px;
-	background-color: rgb(218, 183, 30);
-	line-height: 200%;
-}
-
-.invitation {
-	font-size: 2.2rem;
-	text-align: center;
-	padding-bottom: 30px;
-}
-
-/* 
-.container1,
-.container2 {
+.aboutMe{
 	display: flex;
-	flex-wrap: wrap;
-	flex-direction: row;
+	/* align-items: center; */
+	/* justify-content: center; */
+	margin: 10px auto;
+	height: 400px;
+	width: 1200px;
+}
+.aboutMeTextContainer {
+	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-
-	box-sizing: border-box;
-	width: 100%;
-}
-
-.features {
-	background-color: rgba(153, 153, 153, 0.151);
-	padding: 30px 20px;
-}
-
-.feature {
-	margin: 20px;
-}
-
-.image {
-	height: auto;
-	background-color: cadetblue;
-	margin: 0 auto;
-	transition: all 0.5s ease-in-out;
-	width: 300px;
-}
-
-.image:hover {
-	transform: scale(0.95);
-	opacity: 0.5;
-} */
-
-
-
-.modal-header {
-
-	border-bottom: none;
-}
-
-.modal-title {
-	color: #000;
-}
-
-.modal-footer {
-	display: none;
-}
-
-h2 {
-	font-size: 2rem;
+	height: 100%;
+	width: 400px;
+	background-color: #FFFFFF;
+	font-size: 16px;
 	text-align: center;
-	color: rgb(70, 70, 70);
+}
+
+.aboutMeText {
+	padding: 20px;
+}
+.aboutMePhoto {
+	display: flex;
+	height: 400px;
+	width: 800px;
+}
+
+.myClients {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 10px auto;
+	height: 500px;
+	width: 1200px;
+	background-color: #FFFFFF;
+
+}
+.myClientsLeft {
+	display: flex;
+	flex-direction: column;
+	height: 500px;
+}
+.myClientsLeftUp {
+	background-image: url(/kwiaty/img/LeftUp.jpg);
+	background-size: cover;
+	height: 50%;
+	width: 400px;
+	text-align: center;
+	display: flex;
+	align-items:flex-end;
+	justify-content: center;
+
+}
+
+.myClientsLeftUpHeader {
+	font-size: 30px;
+	color: white;
+
+}
+
+.myClientsLeftDown {
+	background-color: #124A2F;
+	height: 50%;
+	width: 400px;
+	font-size: 30px;
+	color: white;
+	display: flex;
+	text-align: center;
+	align-items: center;
+}
+.myClientsRight {
+	font-size: 20px;
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+.contactContainer {
+	display: flex;
+	margin: 10px auto;
+	height: 500px;
+	width: 1200px;
+}
+.leftContactContainer {
+	width: 50%;
+	height: 100%;
+	background-color: #FFFFFF;
+	display: flex;
+	flex-direction: column;
+}
+.nameEmail {
+	display: flex;
+	justify-content: space-around;
+	margin: 20px auto;
+}
+.nameEmailItem {
+	border: 1px solid #f5debd;
+	border-radius: 30px;
+	width: 210px;
+	height: 50px;
+	padding-left: 10px;
+
+}
+
+.messageSubmit {
+	display: flex;
+	flex-direction: column;
+}
+.messageSubmit {
+	padding-left: 10px;
+	border: 1px solid #f5debd;
+	border-radius: 30px;
+	width: 520px;
+	height: 200px;
+	margin: 20px 40px;
+}
+
+#submitBtn {
+	border-radius: 30px;
+	margin-left: 40px ;
+	width: 30%;
+	height: 50px;
+	background-color: #124A2F;
+	color: white;
+}
+
+.rightContactContainer {
+	width: 50%;
+	height: 100%;
+	background-image: url(/kwiaty/img/contactForm.jpg);
+	background-size: cover;
 }
 
 footer {
@@ -247,12 +313,7 @@ footer {
 	}
 
 
-	.description {
-		font-size: 1.2rem;
-		padding: 15px 30px;
 	}
-
-}
 
 @media (max-width: 356px) {
 	.nav__link {

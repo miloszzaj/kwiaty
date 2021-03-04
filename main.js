@@ -4,7 +4,7 @@ const addNavbarBgrColor = () => {
 	if (window.scrollY > 100) {
 		navBar.classList.add('nav__bgr');
 	}
-	if (window.scrollY < 100) {
+	else {
 		navBar.classList.remove('nav__bgr');
 	}
 };
