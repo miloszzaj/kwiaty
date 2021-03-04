@@ -6,7 +6,7 @@
 html {
 	font-size: 10px;
 	font-family: 'Merienda', cursive;
-	background-color: #FCFAF7;
+	background-color: #fcf2e4;
 
 }
 
@@ -172,9 +172,10 @@ main {
 .contactContainer {
 	display: flex;
 	margin: 10px auto;
-	height: 500px;
+	height: 700px;
 	width: 1200px;
 }
+
 .leftContactContainer {
 	width: 50%;
 	height: 100%;
@@ -182,29 +183,37 @@ main {
 	display: flex;
 	flex-direction: column;
 }
+
+.leftContactContainerHeader {
+	display: flex;
+	justify-content: center;
+	margin: 60px auto;
+	font-size: 30px;
+	color: #124A2F;
+}
 .nameEmail {
 	display: flex;
-	justify-content: space-around;
-	margin: 20px auto;
+	justify-content: space-between;
+	margin: 20px 40px;
 }
 .nameEmailItem {
 	border: 1px solid #f5debd;
 	border-radius: 30px;
-	width: 210px;
+	width: 230px;
 	height: 50px;
 	padding-left: 10px;
-
 }
 
-.messageSubmit {
+.messageSubmitBtn {
 	display: flex;
 	flex-direction: column;
+	width: 600px;
 }
 .messageSubmit {
 	padding-left: 10px;
 	border: 1px solid #f5debd;
 	border-radius: 30px;
-	width: 520px;
+	width: 510px;
 	height: 200px;
 	margin: 20px 40px;
 }
