@@ -12,6 +12,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Merienda&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;0,600;0,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Xanh+Mono:ital@0;1&display=swap" rel="stylesheet">
 
 
@@ -41,7 +43,7 @@
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur asperiores saepe ex in nisi possimus minima aliquam atque magni molestias facere maxime natus, perspiciatis tempore ea tenetur accusamus quisquam exercitationem?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis voluptatibus, alias, distinctio harum, ipsa nam officiis qui velit facilis excepturi facere. Pariatur earum vero sed unde nihil ratione accusantium eaque?
         </span>
     </div>
-    <img class="aboutMePhoto" src="/kwiaty/img/aboutMePhoto.jpg" alt="tom">
+    <img class="aboutMePhoto" src="/img/aboutMePhoto.jpg" alt="tom">
 </section>
 <section class="myClients">
     <div class="myClientsLeft">
@@ -51,8 +53,8 @@
         <div class="myClientsLeftDown">Możesz nas spotkać na rynkach w całym powiecie ;P </div>
     </div>
     <div class= "myClientsRight">
-        <h2>Współpracujemy z małymi i dużymi</h2>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos quisquam, numquam in perferendis consequuntur provident facere sit iusto, amet eius omnis ducimus praesentium, vero totam corrupti animi reiciendis error dolorem?
+        <h2 class="myClientsRightHeader">Współpracujemy z małymi i dużymi</h2>
+    <p class="myClientsRightText">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos quisquam, numquam in perferendis consequuntur provident facere sit iusto, amet eius omnis ducimus praesentium, vero totam corrupti animi reiciendis error dolorem?
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus debitis harum doloremque porro blanditiis officiis qui, impedit cum ullam hic ipsum culpa eius soluta sequi aliquam magnam quia, in dicta!
     </p>
     </div>
@@ -60,21 +62,21 @@
 
 <section class="contactContainer">
 <div class="leftContactContainer">
-    <form>
-        <p class="leftContactContainerHeader">Napisz jeśli masz jakies pytania</p>
+    <form action="https://formspree.io/f/mwkwddel" method="POST" method="post">
+        <p class="leftContactContainerHeader">Napisz, jeśli masz jakies pytania</p>
         <div class="nameEmail">
             <label for="name" >
-                <input class="nameEmailItem" type="text" placeholder="Name" id="name"class= "email" required>
+                <input class="nameEmailItem name" type="text" placeholder="Name" id="name" name="name" required>
             </label>
             <label for="email">
-                <input class="nameEmailItem" type="email" placeholder="Email" id="email" required>
+                <input class="nameEmailItem email" type="email" placeholder="Email" id="email" name="email" required>
             </label>
         </div>
         <div class="messageSubmitBtn">
             <label for="message">
-                <input class="messageSubmit" placeholder="Message..." required=" "></input>
+                <textarea class="messageSubmit" placeholder="Message..." name="message" required></textarea>
             </label>
-            <button id="submitBtn" type="submit" value="Submit">Wyślij</button>
+            <button class="submitBtn" type="submit" value="Submit">Wyślij</button>
         </div>
 
     </form>
@@ -83,7 +85,7 @@
 
 </section>
 
-    </main>
+
     <section>
         <div class="map" id="mapOSM">
             <div id="popup" class="ol-popup popup">
@@ -94,15 +96,19 @@
         </div>
 
     </section>
+</main>
     <footer>&copy; Ogrodnictwo Tom C.</footer>
 
     <script src="main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <script src="contactForm.js"></script>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
         integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
+    </script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
         integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous">
-    </script>
+    </script> -->
 </body>
 
 

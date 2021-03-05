@@ -5,7 +5,7 @@
 
 html {
 	font-size: 10px;
-	font-family: 'Merienda', cursive;
+	font-family: 'Montserrat', sans-serif;
 	background-color: #fcf2e4;
 
 }
@@ -73,8 +73,7 @@ header h1 {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	font-family: 'Merienda',
-		cursive;
+
 
 }
 
@@ -105,10 +104,13 @@ main {
 	font-size: 16px;
 	text-align: center;
 }
-
+.aboutMeHeader {
+	font-variant: small-caps;
+}
 .aboutMeText {
 	padding: 20px;
 }
+
 .aboutMePhoto {
 	display: flex;
 	height: 400px;
@@ -131,7 +133,7 @@ main {
 	height: 500px;
 }
 .myClientsLeftUp {
-	background-image: url(/kwiaty/img/LeftUp.jpg);
+	background-image: url(/img/LeftUp.jpg);
 	background-size: cover;
 	height: 50%;
 	width: 400px;
@@ -139,24 +141,27 @@ main {
 	display: flex;
 	align-items:flex-end;
 	justify-content: center;
-
 }
 
 .myClientsLeftUpHeader {
 	font-size: 30px;
 	color: white;
-
+	padding-bottom: 20px;
+	font-weight: 600;
+	font-variant: small-caps;
+	text-shadow: 1px 1px 3px black;
 }
 
 .myClientsLeftDown {
 	background-color: #124A2F;
 	height: 50%;
-	width: 400px;
+	width: 360px;
 	font-size: 30px;
 	color: white;
 	display: flex;
 	text-align: center;
 	align-items: center;
+	padding: 20px;
 }
 .myClientsRight {
 	font-size: 20px;
@@ -168,6 +173,14 @@ main {
 	justify-content: center;
 	text-align: center;
 }
+
+.myClientsRightHeader {
+	font-variant: small-caps;
+}
+
+.myClientsRightText {
+	padding: 20px;
+	}
 
 .contactContainer {
 	display: flex;
@@ -189,6 +202,7 @@ main {
 	justify-content: center;
 	margin: 60px auto;
 	font-size: 30px;
+	font-weight: 600;
 	color: #124A2F;
 }
 .nameEmail {
@@ -202,6 +216,7 @@ main {
 	width: 230px;
 	height: 50px;
 	padding-left: 10px;
+	font-family: 'Montserrat', sans-serif;
 }
 
 .messageSubmitBtn {
@@ -216,21 +231,30 @@ main {
 	width: 510px;
 	height: 200px;
 	margin: 20px 40px;
+	padding-left: 10px;
+	padding-top: 10px;
+	font-family: 'Montserrat', sans-serif;
 }
 
-#submitBtn {
+.submitBtn {
+	display: block;
 	border-radius: 30px;
 	margin-left: 40px ;
 	width: 30%;
 	height: 50px;
 	background-color: #124A2F;
 	color: white;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.status {
+	position: relative;
 }
 
 .rightContactContainer {
 	width: 50%;
 	height: 100%;
-	background-image: url(/kwiaty/img/contactForm.jpg);
+	background-image: url(/img/contactForm.jpg);
 	background-size: cover;
 }
 
