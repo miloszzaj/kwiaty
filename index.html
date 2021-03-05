@@ -67,9 +67,11 @@
         <div class="nameEmail">
             <label for="name" >
                 <input class="nameEmailItem name" type="text" placeholder="Name" id="name" name="name" required>
+                <div class="status"></div>
             </label>
             <label for="email">
                 <input class="nameEmailItem email" type="email" placeholder="Email" id="email" name="email" required>
+                <div class="status"></div>
             </label>
         </div>
         <div class="messageSubmitBtn">
@@ -78,14 +80,11 @@
             </label>
             <button class="submitBtn" type="submit" value="Submit">Wyślij</button>
         </div>
-
     </form>
 </div>
 <div class="rightContactContainer">rfgdsrfg</div>
 
 </section>
-
-
     <section>
         <div class="map" id="mapOSM">
             <div id="popup" class="ol-popup popup">
@@ -97,7 +96,13 @@
 
     </section>
 </main>
-    <footer>&copy; Ogrodnictwo Tom C.</footer>
+    <footer>
+        <div class="footerInformations">
+            <div class="footerPhone">Zadzwoń: 123 456 789</div>
+            <div class="footerAdress">Iłowo-Osada 13-240, ul. Śmaka i Owaka 3/4</div>
+        </div>
+        <div class="footerCopy">&copy; Ogrodnictwo Tom C.</div>
+    </footer>
 
     <script src="main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
