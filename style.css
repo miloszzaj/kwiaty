@@ -279,11 +279,27 @@ footer {
 	align-items: center;
 }
 
-/* .footerInformations {
+.footerInfos {
 	display: flex;
-	flex-direction: row;
-} */
+	flex-direction: column;
+	justify-content: end;
+	border: 1px solid white;
+	border-radius: 30px;
+	padding: 30px;
+}
 
+.footerPhone {
+	display: flex;
+	padding-bottom: 20px;
+	margin: auto;
+}
+.footerCopy {
+	margin-top: 20px;
+}
+footerAdress {
+	display: flex;
+	padding-top: 20px;
+}
 .map {
 	height: 380px;
 	width: 100%;

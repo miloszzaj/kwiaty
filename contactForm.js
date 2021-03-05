@@ -2,25 +2,27 @@
 const submitBtn = document.querySelector('.submitBtn')
 
 const email = document.querySelector('.email')
-const name = document.querySelector('.name')
+const clientName = document.querySelector('.name')
 
 const sendContactForm = function(e) {
     if(email.length >5 && email.includes('@') && email.includes('.')){
-        // e.preventDefault()
+        e.preventDefault()
         // console.log("działa")
+        email.classList.remove("notValid")
     }
     else {
         // console.log('nie działa')
         email.classList.add("notValid")
-}
-    if(name.length >=2){
-        // e.preventDefault()
-        // console.log("działa")
+    }
+    if(clientName.length >=2){
+        e.preventDefault()
+        console.log("działa")
+        clientName.classList.remove("notValid")
     }
     else {
-        // console.log('nie działa')
-        email.classList.add("notValid")
-}
+        console.log('nie działa')
+        clientName.classList.add("notValid")
+    }
 }
 submitBtn.addEventListener('click', sendContactForm)
 
