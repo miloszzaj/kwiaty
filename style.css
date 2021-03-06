@@ -6,7 +6,7 @@
 html {
 	font-size: 10px;
 	font-family: 'Montserrat', sans-serif;
-	background-color: #F1F2DD;
+	background-color: #EEF0D5;
 
 }
 
@@ -73,13 +73,10 @@ header h1 {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-
-
 }
 
 .none {
 	display: none;
-
 }
 
 main {
@@ -125,7 +122,6 @@ main {
 	height: 500px;
 	width: 1200px;
 	background-color: #FFFFFF;
-
 }
 .myClientsLeft {
 	display: flex;
@@ -218,16 +214,42 @@ main {
 	padding-left: 10px;
 	font-family: 'Montserrat', sans-serif;
 }
-
-.notValid {
-	content: 'not valid';
-	background-color: rgb(216, 47, 47);
-	font-size: 20px;
-	width: 230px;
+.statusName {
+	border: 1px solid #f5debd;
+	font-size: 15px;
+	width: 240px;
+	height: 30px;
 	display: flex;
 	border-radius: 30px;
-	padding-left: 10px;
+	align-items: center;
+	justify-content: center;
 }
+
+.notValid {
+	color: white;
+	position: relative;
+	font-size: 15px;
+	width: 240px;
+	height: 30px;
+	display: flex;
+	border-radius: 30px;
+	align-items: center;
+	justify-content: center;
+	background-color: rgb(216, 47, 47);
+	animation: notValid 3s infinite;
+}
+.notValid:after {
+	content: 'wpisz poprawne wartości';
+}
+
+@keyframes notValid {
+	0%   {background-color: red;}
+	50%  {background-color: white;}
+	/* 90% {background-color: white;} */
+	100% {background-color: red;}
+
+}
+
 
 .messageSubmitBtn {
 	display: flex;
