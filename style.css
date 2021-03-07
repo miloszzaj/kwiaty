@@ -204,7 +204,7 @@ main {
 .nameEmail {
 	display: flex;
 	justify-content: space-between;
-	margin: 20px 40px;
+	margin: 20px 40px 0 40px;
 }
 .nameEmailItem {
 	border: 1px solid #f5debd;
@@ -214,20 +214,7 @@ main {
 	padding-left: 10px;
 	font-family: 'Montserrat', sans-serif;
 }
-.statusName {
-	border: 1px solid #f5debd;
-	font-size: 15px;
-	width: 240px;
-	height: 30px;
-	display: flex;
-	border-radius: 30px;
-	align-items: center;
-	justify-content: center;
-}
-
-.notValid {
-	color: white;
-	position: relative;
+.statusName, .statusEmail{
 	font-size: 15px;
 	width: 240px;
 	height: 30px;
@@ -237,9 +224,8 @@ main {
 	justify-content: center;
 	background-color: rgb(216, 47, 47);
 	animation: notValid 3s infinite;
-}
-.notValid:after {
-	content: 'wpisz poprawne wartości';
+	color: white;
+
 }
 
 @keyframes notValid {
@@ -247,16 +233,17 @@ main {
 	50%  {background-color: white;}
 	/* 90% {background-color: white;} */
 	100% {background-color: red;}
-
 }
 
+.hidden {
+	visibility: hidden;
+}
 
 .messageSubmitBtn {
 	display: flex;
 	flex-direction: column;
 	width: 600px;
 }
-
 .messageSubmit {
 	padding-left: 10px;
 	border: 1px solid #f5debd;
@@ -268,7 +255,6 @@ main {
 	padding-top: 10px;
 	font-family: 'Montserrat', sans-serif;
 }
-
 .submitBtn {
 	display: block;
 	border-radius: 30px;
@@ -279,17 +265,46 @@ main {
 	color: white;
 	font-family: 'Montserrat', sans-serif;
 }
-
-.status {
-	position: relative;
-}
-
 .rightContactContainer {
 	width: 50%;
 	height: 100%;
 	background-image: url(/img/contactForm.jpg);
 	background-size: cover;
 }
+.offerContainer {
+	display: flex;
+	width: 1200px;
+	height: 500px;
+	margin: 10px auto;
+}
+.offerPhoto {
+	background-image: url(/img/offerPhoto.jpg);
+	background-size: cover;
+	height: 100%;
+	width: 800px;
+}
+.offerTextContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	width: 400px;
+	background-color: #FFFFFF;
+	font-size: 16px;
+	text-align: center;
+}
+.offerHeader {
+	font-variant: small-caps;
+	color: #124A2F;
+	font-size: 30px;
+}
+.offerText {
+font-size: 20px;
+padding: 20px;
+
+}
+
 
 footer {
 	background-color: #000;
@@ -297,8 +312,10 @@ footer {
 	padding: 20px;
 	font-size: 21px;
 	display: flex;
+	height: 400px;
 	flex-direction: column;
 	align-items: center;
+	justify-content:space-between ;
 }
 
 .footerInfos {
@@ -308,6 +325,7 @@ footer {
 	border: 1px solid white;
 	border-radius: 30px;
 	padding: 30px;
+	margin-top: 20px   ;
 }
 
 .footerPhone {
@@ -316,14 +334,14 @@ footer {
 	margin: auto;
 }
 .footerCopy {
-	margin-top: 20px;
+	margin-bottom: 20px;
 }
 footerAdress {
 	display: flex;
 	padding-top: 20px;
 }
 .map {
-	height: 380px;
+	height: 500px;
 	width: 100%;
 }
 

@@ -10,16 +10,16 @@ const statusName = document.querySelector('.statusName')
 const sendContactForm = function(e) {
     e.preventDefault()
     if(email.value.length >5 && email.value.includes('@') && email.value.includes('.')){
-        statusEmail.classList.remove("notValid")
+        statusEmail.classList.add("hidden")
     }
     else {
-        statusEmail.classList.add("notValid")
+        statusEmail.classList.remove("hidden")
     }
     if(clientName.value.length >=2){
-        statusName.classList.remove("notValid")
+        statusName.classList.add("hidden")
     }
     else {
-        statusName.classList.add("notValid")
+        statusName.classList.remove("hidden")
     }
 }
 submitBtn.addEventListener('click', sendContactForm)
