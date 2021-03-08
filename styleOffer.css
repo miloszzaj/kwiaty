@@ -1,0 +1,114 @@
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 10px;
+	font-family: 'Montserrat', sans-serif;
+	background-color: #EEF0D5;
+}
+
+.nav {
+	display: flex;
+	justify-content: flex-end;
+	position: fixed;
+	width: 100%;
+	background-color: black;
+	margin: 0;
+	text-align: center;
+	z-index: 999;
+	transition: all 0.2s ease;
+}
+
+.nav__link {
+	display: inline-block;
+	font-size: 2rem;
+	font-family: 'Syne Mono', monospace;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: whitesmoke;
+	padding: 4px 6px;
+	margin: 20px 5px;
+	letter-spacing: 2px;
+}
+
+.nav__link--contact {
+	font-size: 2.4rem;
+	border: 1px solid #999393;
+	padding: 2px 40px;
+	margin: 20px 60px 20px 5px;
+}
+
+.nav__link:hover {
+	/* border-bottom: 1px solid var(--bright-green-color); */
+	color: var(--bright-green-color);
+	transition: 0.3s;
+}
+
+.nav__link--contact:hover {
+	background-color: var(--dark-green-color);
+	border-color: var(--dark-green-color);
+	color: var(--bright-green-color);
+}
+
+.nav__bgr {
+	background-color: #000;
+	box-shadow: 0 10px 6px -6px black;
+}
+
+.headerPicture {
+    background-image: url(/img/headerPicture.jpg);
+    background-size:cover;
+	height: 40vh;}
+
+.headerText {
+    position: relative;
+    z-index: 99;
+	font-size: 3rem;
+	color: whitesmoke;
+	text-align: center;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 50%);
+	display: flex;
+	flex-wrap: wrap;
+    align-items: center;
+	justify-content: center;
+    text-shadow: 2px 2px 3px black;
+}
+
+.flowersOffer {
+    margin: 20px 100px;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.flowerItemsContainer {
+    height: 400px;
+    width:300px;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin: 20px 20px;
+    overflow: hidden;
+
+}
+.flowerImage {
+    background-size: cover;
+    height: 80%;
+    width: auto;
+    /* border-top-left-radius: 20px;
+    border-top-right-radius: 20px; */
+}
+
+.flowerName, .flowerPrice {
+    color: white;
+    height: 10%;
+    font-size: 2rem;
+    background-color: var(--dark-green-color);
+    /* padding: 5px; */
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;

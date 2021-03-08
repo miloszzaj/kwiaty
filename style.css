@@ -7,7 +7,6 @@ html {
 	font-size: 10px;
 	font-family: 'Montserrat', sans-serif;
 	background-color: #EEF0D5;
-
 }
 
 .nav {
@@ -42,15 +41,15 @@ html {
 }
 
 .nav__link:hover {
-	/* border-bottom: 1px solid rgb(172, 218, 6); */
-	color: rgb(172, 218, 6);
+	/* border-bottom: 1px solid var(--bright-green-color); */
+	color: var(--bright-green-color);
 	transition: 0.3s;
 }
 
 .nav__link--contact:hover {
-	background-color: rgb(16, 105, 4);
-	border-color: rgb(16, 105, 4);
-	color: rgb(172, 218, 6);
+	background-color: var(--dark-green-color);
+	border-color: var(--dark-green-color);
+	color: var(--bright-green-color);
 }
 
 .nav__bgr {
@@ -68,11 +67,13 @@ header h1 {
 	font-size: 5rem;
 	color: whitesmoke;
 	text-align: center;
-	line-height: 40vh;
+	height: 100%;
 	background-color: rgba(0, 0, 0, 50%);
 	display: flex;
-	flex-wrap: wrap;
+	/* flex-wrap: wrap; */
+	align-items: center;
 	justify-content: center;
+	text-shadow: 2px 2px 3px black;
 }
 
 .none {
@@ -145,11 +146,11 @@ main {
 	padding-bottom: 20px;
 	font-weight: 600;
 	font-variant: small-caps;
-	text-shadow: 1px 1px 3px black;
+	text-shadow: 2px 2px 4px black;
 }
 
 .myClientsLeftDown {
-	background-color: #124A2F;
+	background-color: var(--dark-green-color);
 	height: 50%;
 	width: 360px;
 	font-size: 30px;
@@ -199,7 +200,7 @@ main {
 	margin: 60px auto;
 	font-size: 30px;
 	font-weight: 600;
-	color: #124A2F;
+	color: var(--dark-green-color);
 }
 .nameEmail {
 	display: flex;
@@ -261,7 +262,7 @@ main {
 	margin-left: 40px ;
 	width: 30%;
 	height: 50px;
-	background-color: #124A2F;
+	background-color: var(--dark-green-color);
 	color: white;
 	font-family: 'Montserrat', sans-serif;
 }
@@ -296,7 +297,7 @@ main {
 }
 .offerHeader {
 	font-variant: small-caps;
-	color: #124A2F;
+	color: var(--dark-green-color);
 	font-size: 30px;
 }
 .offerText {
