@@ -79,10 +79,13 @@ html {
 }
 
 .flowersOffer {
-    margin: 20px 100px;
+    margin: 20px auto;
     height: 100%;
+	width: 1500px;
     display: flex;
     flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
 }
 .flowerItemsContainer {
     height: 400px;
@@ -94,11 +97,11 @@ html {
 
 }
 .flowerImage {
-    background-size: cover;
+    background-size: contain;
     height: 80%;
     width: auto;
-    /* border-top-left-radius: 20px;
-    border-top-right-radius: 20px; */
+	position: relative;
+	z-index: 1;
 }
 
 .flowerName, .flowerPrice {
@@ -112,3 +115,8 @@ html {
     align-items: center;
     justify-content: center;
     width: 100%;
+	position: relative;
+	z-index: 99;
+	display: flex;
+	align-self: flex-end;
+}
