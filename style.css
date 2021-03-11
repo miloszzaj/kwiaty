@@ -6,7 +6,7 @@
 html {
 	font-size: 10px;
 	font-family: 'Montserrat', sans-serif;
-	background-color: #EEF0D5;
+	background-color: var(--background-color);
 }
 
 .nav {
