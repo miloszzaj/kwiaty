@@ -1,19 +1,7 @@
 
 
-var slideIndex = 0;
+let slideIndex = 0;
 showSlides();
-
-// function plusSlide(n) {
-//   showSlides(slideIndex += n);
-//   // clearTimeout(indexTimeout)
-
-// }
-
-// // Thumbnail image controls
-// function currentSlide(n) {
-//   showSlides(slideIndex = n);
-
-// }
 
 
 function showSlides() {

@@ -5,9 +5,10 @@
 }
 
 .slidesContainer {
-    background-image: url(/img/opinion_background.jpg);
+    /* background-image: url(/img/opinion_background.jpg); */
     background-size: cover;
     height: 100%;
+    width: 100%;
     display: flex;
 }
 
@@ -42,21 +43,9 @@
     height: 150px;
     width: 100vw;
 }
-
-/* .slidesContainer {
-    background-image: url(/img/opinion_background.jpg);
-    background-size: cover;
-    height: 100%;
-    display: flex;
-} */
-
 .slides {
     padding-left:20px;
     padding-right:20px;
-    text-align: center;
-    margin: auto;
-    height: 100%;
-    width: 100%;
 }
 
 .slides h1 {

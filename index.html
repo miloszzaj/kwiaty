@@ -14,9 +14,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;0,600;0,800;1,900&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
 
-    <link rel="stylesheet" href="root.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="/slider.css">
+    <link rel="stylesheet" href="/css/root.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/slider.css">
 </head>
 
 <body>
@@ -27,12 +27,12 @@
                 <div class="line line_3"></div>
             </div>
         <div class="nav_list">
-            <a class="nav__link" href="#">o mnie</a>
-            <a class="nav__link" href="#">moi klienci</a>
+            <a class="nav__link" href="#aboutMe">o mnie</a>
+            <a class="nav__link" href="#myClients">moi klienci</a>
             <a class="nav__link" href="/oferta.html">oferta</a>
-            <a class="nav__link" href="#">opinie</a>
-            <a class="nav__link" href="#">jak dojechać</a>
-            <a class="nav__link nav__link--contact" href="#">kontakt</a>
+            <a class="nav__link" href="#offerContainer">opinie</a>
+            <a class="nav__link" href="#contactContainer">kontakt</a>
+            <a class="nav__link" href="#mapOSM">jak dojechać</a>
         </div>
     </nav>
 
@@ -41,7 +41,7 @@
         <h1>Najpiękniejsze kwiaty w okolicy</h1>
     </header>
     <main>
-        <section class="aboutMe">
+        <section class="aboutMe" id="aboutMe">
             <div class="aboutMeTextContainer">
                 <h2 class="aboutMeHeader">Na rynku od 1970 roku</h2>
                 <span class="aboutMeText">Jesteśmy zawsze skupieni na jednej rzeczy: zadowolenie klienta...
@@ -50,7 +50,7 @@
             </div>
             <img class="aboutMePhoto" src="/img/aboutMePhoto.jpg" alt="tom">
         </section>
-        <section class="myClients">
+        <section class="myClients" id="myClients">
             <div class="myClientsLeft">
                 <div class="myClientsLeftUp">
                     <p class="myClientsLeftUpHeader">Moi klienci</p>
@@ -64,63 +64,56 @@
                 </p>
             </div>
         </section>
-        <section class="contactContainer">
-            <div class="leftContactContainer">
-                <form action="https://formspree.io/f/mwkwddel" method="POST" method="post">
-                    <p class="leftContactContainerHeader">Napisz, jeśli masz jakies pytania</p>
-                    <div class="nameEmail">
-                        <label for="name" >
-                            <input class="nameEmailItem name" type="text" placeholder="Name" id="name" name="name" required>
-                            <div class="statusName hidden">wpisz poprawne imię</div>
-                        </label>
-                        <label for="email">
-                            <input class="nameEmailItem email" type="email" placeholder="Email" id="email" name="email" required>
-                            <div class="statusEmail hidden">wpisz poprawny email</div>
-                        </label>
-                    </div>
-                    <div class="messageSubmitBtn">
-                        <label for="message">
-                            <textarea class="messageSubmit" placeholder="Message..." name="message" required></textarea>
-                        </label>
-                        <button class="submitBtn" type="submit" value="Submit">Wyślij</button>
-                    </div>
-                </form>
-            </div>
-            <div class="rightContactContainer"></div>
-        </section>
-        <section class="offerContainer">
+        <section class="offerContainer" id="offerContainer">
             <div class="offerPhoto"></div>
             <div class="offerTextContainer">
                 <h1 class="offerHeader">Asortyment</h1>
                 <span class="offerText">Zapraszam do zapoznania się z moją ofertą.
                     Kliknij w przycisk poniżej aby zobaczyć asortyment </span>
-                <button onclick="location.href='/oferta.html'" type=button class="offerBtn">Moja Oferta</button>
-            </div>
-        </section>
-        <section class="opinionContainer">
-            <div class="slidesContainer">
-                <div class="slides">
-                    <h1>Super kwiatki</h1>
-                    <p class="opinionAuthor">- John Keats</p>
+                    <button onclick="location.href='/oferta.html'" type=button class="offerBtn">Moja Oferta</button>
                 </div>
-                <div class="slides">
-                    <h1>Bardzo smaczne i w ogóle.
-                        <br>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui nesciunt nisi, nihil exercitationem amet error? Error placeat consequatur ex molestiae vel. Nesciunt quis dolore distinctio, repellat pariatur molestias repellendus totam!</h1>
-                    <p class="opinionAuthor">- Ernest Hemingway</p>
+            </section>
+            <section class="opinionContainer">
+                <div class="slidesContainer">
+                    <div class="slides">
+                        <h1>Super kwiatki, kolorowo i pachnąco</h1>
+                        <p class="opinionAuthor">- Kłapouchy Kowalski</p>
+                    </div>
+                    <div class="slides">
+                        <h1>Bardzo smaczne i w ogóle.
+                            <br>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h1>
+                            <p class="opinionAuthor">- Ernest Bimbrownik</p>
+                    </div>
+                        <div class="slides">
+                            <h1>Można wypchać tym lisa - polecam</h1>
+                            <p class="opinionAuthor">- Kubus Uszatek z żoną</p>
+                        </div>
+                    </div>
+            </section>
+            <section class="contactContainer" id="contactContainer">
+                <div class="leftContactContainer">
+                    <form action="https://formspree.io/f/mwkwddel" method="POST" method="post">
+                        <p class="leftContactContainerHeader">Napisz, jeśli masz jakies pytania</p>
+                        <div class="nameEmail">
+                            <label for="name" >
+                                <input class="nameEmailItem name" type="text" placeholder="Name" id="name" name="name" required>
+                                <div class="statusName hidden">wpisz poprawne imię</div>
+                            </label>
+                            <label for="email">
+                                <input class="nameEmailItem email" type="email" placeholder="Email" id="email" name="email" required>
+                                <div class="statusEmail hidden">wpisz poprawny email</div>
+                            </label>
+                        </div>
+                        <div class="messageSubmitBtn">
+                            <label for="message">
+                                <textarea class="messageSubmit" placeholder="Message..." name="message" required></textarea>
+                            </label>
+                            <button class="submitBtn" type="submit" value="Submit">Wyślij</button>
+                        </div>
+                    </form>
                 </div>
-                <div class="slides">
-                    <h1>I have not failed. I've just found 10,000 ways that won't work.</h1>
-                    <p class="opinionAuthor">- Thomas A. Edison</p>
-                </div>
-                <!-- <a class="prev" onclick="plusSlide(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlide(1)">&#10095;</a> -->
-            </div>
-            <!-- <div class="dotContainer">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-            </div> -->
-        </section>
+                <div class="rightContactContainer"></div>
+            </section>
         <section>
             <div class="map" id="mapOSM">
                 <div id="popup" class="ol-popup popup">
@@ -139,18 +132,12 @@
             <div class="footerCopy">&copy; Ogrodnictwo Tom C.</div>
         </footer>
 
-        <script src="main.js"></script>
+        <script src="/JavaScript/main.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
-        <script src="contactForm.js"></script>
-        <script src="hamburger.js"></script>
-        <script src="/slider.js"></script>
+        <script src="/JavaScript/contactForm.js"></script>
+        <script src="/JavaScript/hamburger.js"></script>
+        <script src="/JavaScript/slider.js"></script>
 
-        <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
-            integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous">
-        </script> -->
-        <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
-            integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous">
-        </script> -->
 </body>
 
 

@@ -7,20 +7,28 @@
     <title>Asortyment</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;0,600;0,800;1,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="root.css">
-    <link rel="stylesheet" href="styleOffer.css">
+    <link rel="stylesheet" href="/css/root.css">
+    <link rel="stylesheet" href="/css/styleOffer.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
 </head>
 
 
 <body>
     <nav class="nav">
-        <a class="nav__link" href="#">o mnie</a>
-        <a class="nav__link" href="#">moi klienci</a>
+        <div class="hamburger_menu">
+            <div class="line line_1"></div>
+            <div class="line line_2"></div>
+            <div class="line line_3"></div>
+        </div>
+    <div class="nav_list">
+        <a class="nav__link" href="#aboutMe">o mnie</a>
+        <a class="nav__link" href="#myClients">moi klienci</a>
         <a class="nav__link" href="/oferta.html">oferta</a>
-        <a class="nav__link" href="#">opinie</a>
-        <a class="nav__link" href="#">jak dojechać</a>
+        <a class="nav__link" href="#offerContainer">opinie</a>
         <a class="nav__link nav__link--contact" href="#">kontakt</a>
-    </nav>
+        <a class="nav__link" href="#mapOSM">jak dojechać</a>
+    </div>
+</nav>
     <header>
         <div class="headerPicture">
             <h1 class="headerText">Pniżej możesz zapoznać się z moim asortymem oraz cenami</h1>
@@ -59,6 +67,7 @@
                 <p class="flowerPrice">cena 30PLN</p>
             </div>
         </section>
+        <script src="/hamburger.js"></script>
     </main>
 </body>
 </html>
