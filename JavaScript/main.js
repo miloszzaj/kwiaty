@@ -1,10 +1,10 @@
 //zmiana koloru nav bar po scrollu
 const navBar = document.querySelector('.nav');
 const addNavbarBgrColor = () => {
-	if (window.scrollY > 100) {
+	if (window.scrollY > 80) {
 		navBar.classList.add('nav__bgr');
 	}
-	if (window.scrollY < 100) {
+	else {
 		navBar.classList.remove('nav__bgr');
 	}
 };
