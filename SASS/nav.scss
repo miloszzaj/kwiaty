@@ -1,0 +1,41 @@
+@import "variables";
+
+// base & layout
+@import "base";
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  width: 100vw;
+  background-color: transparent;
+  margin: 0;
+  text-align: center;
+  z-index: 999;
+  transition: all 0.2s ease;
+
+  &__list {
+    margin-right: 50px;
+
+    &--link {
+      display: inline-block;
+      font-size: 2rem;
+      font-family: "Syne Mono", monospace;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: whitesmoke;
+      padding: 4px 6px;
+      margin: 20px 5px;
+      letter-spacing: 2px;
+    }
+    &--link:hover {
+      color: $bright-green;
+      transition: 0.3s;
+    }
+    &--contact:hover {
+      background-color: $dark-green;
+      border-color: $dark-green;
+      color: $bright-green;
+    }
+  }
+}

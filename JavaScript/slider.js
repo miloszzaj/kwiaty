@@ -1,11 +1,7 @@
-
-
 let slideIndex = 0;
 showSlides();
 
-
 function showSlides() {
-  // let indexTimeout = setTimeout(plusSlide, 2000)
   let i;
   const slides = document.getElementsByClassName("slides");
   // const dots
@@ -14,9 +10,9 @@ function showSlides() {
   }
   slideIndex++;
   if (slideIndex > slides.length) {
-    slideIndex = 1
+    slideIndex = 1;
   }
 
-  slides[slideIndex-1].style.display = "flex";
+  slides[slideIndex - 1].style.display = "flex";
   setTimeout(showSlides, 2000);
 }

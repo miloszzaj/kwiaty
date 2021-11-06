@@ -22,10 +22,18 @@
     />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
 
+    <link rel="stylesheet" href="/SASS/nav.css" />
+    <link rel="stylesheet" href="/SASS/aboutMe.css" />
+    <link rel="stylesheet" href="/SASS/myClients.css" />
+    <link rel="stylesheet" href="/SASS/contact.css" />
+    <link rel="stylesheet" href="/SASS/footer.css" />
+
     <link rel="stylesheet" href="/css/root.css" />
-    <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/slider.css" />
+
     <link rel="stylesheet" href="/SASS/index.css" />
+
+    k
   </head>
 
   <body>
@@ -52,6 +60,8 @@
       <h1 class="header__catchword">Najpiękniejsze kwiaty w okolicy</h1>
     </header>
     <main>
+      <!-- about me -->
+
       <section class="aboutMe" id="aboutMe">
         <div class="aboutMe__container">
           <h2 class="aboutMe__container--header">Na rynku od 1970 roku</h2>
@@ -69,6 +79,9 @@
         </div>
         <img class="aboutMe__photo" src="/img/aboutMePhoto.jpg" alt="tom" />
       </section>
+
+      <!-- my clients -->
+
       <section class="myClients" id="myClients">
         <div class="myClients__left">
           <div class="myClients__left--up">
@@ -93,6 +106,9 @@
           </p>
         </div>
       </section>
+
+      <!-- offer -->
+
       <section class="offer" id="offerContainer">
         <div class="offer__photo"></div>
         <div class="offer__container">
@@ -110,6 +126,9 @@
           </button>
         </div>
       </section>
+
+      <!-- opinion -->
+
       <section class="opinionContainer">
         <div class="slidesContainer">
           <div class="slides">
@@ -129,78 +148,97 @@
           </div>
         </div>
       </section>
-      <section class="contactContainer" id="contactContainer">
-        <div class="leftContactContainer">
+
+      <!-- contact -->
+
+      <section class="contact" id="contactContainer">
+        <div class="contact__left">
           <form
             action="https://formspree.io/f/mwkwddel"
             method="POST"
             method="post"
           >
-            <p class="leftContactContainerHeader">
+            <p class="contact__left--header">
               Napisz, jeśli masz jakies pytania
             </p>
-            <div class="nameEmail">
+            <div class="contact__left--emailName">
               <label for="name">
                 <input
-                  class="nameEmailItem name"
+                  class="contact__left--emailName--item name"
                   type="text"
                   placeholder="Name"
                   id="name"
                   name="name"
                   required
                 />
-                <div class="statusName hidden">wpisz poprawne imię</div>
+                <div class="contact__left--emailName--statusName hidden">
+                  wpisz poprawne imię
+                </div>
               </label>
+
               <label for="email">
                 <input
-                  class="nameEmailItem email"
+                  class="contact__left--emailName--item email"
                   type="email"
                   placeholder="Email"
                   id="email"
                   name="email"
                   required
                 />
-                <div class="statusEmail hidden">wpisz poprawny email</div>
+                <div class="contact__left--emailName--statusEmail hidden">
+                  wpisz poprawny email
+                </div>
               </label>
             </div>
-            <div class="messageSubmitBtn">
+
+            <div class="contact__left--message">
               <label for="message">
                 <textarea
-                  class="messageSubmit"
+                  class="contact__left--message--submit"
                   placeholder="Message..."
                   name="message"
                   required
                 ></textarea>
               </label>
-              <button class="submitBtn" type="submit" value="Submit">
+              <button
+                class="contact__left--message--btn"
+                type="submit"
+                value="Submit"
+              >
                 Wyślij
               </button>
             </div>
           </form>
         </div>
-        <div class="rightContactContainer"></div>
+        <div class="contact__right"></div>
       </section>
+
+      <!-- map  -->
+
       <section>
         <div class="map" id="mapOSM">
-          <div id="popup" class="ol-popup popup">
+          <div id="popup" class="ol-popup map__popup">
             <a href="#" id="popup-closer" class="ol-popup-closer"></a>
             <div id="popup-content"></div>
           </div>
-          <!-- <div class="popup" id="popup">Hello World</div> -->
         </div>
       </section>
     </main>
+
+    <!-- footer -->
+
     <footer>
-      <div class="footerInfos">
-        <div class="footerPhone">Zadzwoń: 123 456 789</div>
-        <div class="footerAdress">
+      <div class="footer">
+        <div class="footer__phone">Zadzwoń: 123 456 789</div>
+        <div class="footer__adress">
           Iłowo-Osada 13-240, ul. Śmaka i Owaka 3/4
         </div>
       </div>
-      <div class="footerCopy">&copy; Ogrodnictwo Tom C.</div>
+      <div class="footer__copy">&copy; Ogrodnictwo Tom C.</div>
     </footer>
 
-    <script src="/JavaScript/main.js"></script>
+    <script src="/JavaScript/nav.js"></script>
+    <script src="/JavaScript/map.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
     <script src="/JavaScript/contactForm.js"></script>
     <script src="/JavaScript/hamburger.js"></script>

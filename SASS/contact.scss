@@ -1,0 +1,103 @@
+@import "variables";
+
+// base & layout
+@import "base";
+
+.contact {
+  display: flex;
+  margin: 10px auto;
+  height: 700px;
+  width: 1200px;
+
+  &__left {
+    width: 50%;
+    height: 100%;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    &--header {
+      display: flex;
+      justify-content: center;
+      margin: 60px auto;
+      font-size: 30px;
+      font-weight: 600;
+      color: $dark-green;
+    }
+    &--emailName {
+      display: flex;
+      justify-content: space-between;
+      margin: 20px 40px 0 40px;
+      &--item {
+        border: 1px solid #f5debd;
+        border-radius: 30px;
+        width: 230px;
+        height: 50px;
+        padding-left: 10px;
+        font-family: "Montserrat", sans-serif;
+      }
+      &--statusName,
+      &--statusEmail {
+        font-size: 15px;
+        width: 240px;
+        height: 30px;
+        display: flex;
+        border-radius: 30px;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(216, 47, 47);
+        animation: notValid 3s infinite;
+        color: white;
+      }
+    }
+    &--message {
+      display: flex;
+      flex-direction: column;
+      width: 600px;
+
+      &--submit {
+        padding-left: 10px;
+        border: 1px solid #f5debd;
+        border-radius: 30px;
+        width: 510px;
+        height: 200px;
+        margin: 20px 40px;
+        padding-left: 10px;
+        padding-top: 10px;
+        font-family: "Montserrat", sans-serif;
+      }
+      &--btn {
+        display: block;
+        border-radius: 30px;
+        margin-left: 40px;
+        width: 30%;
+        height: 50px;
+        background-color: $dark-green;
+        color: white;
+        font-family: "Montserrat", sans-serif;
+        font-size: 20px;
+      }
+    }
+  }
+  &__right {
+    width: 50%;
+    height: 100%;
+    background-image: url(/img/contactForm.jpg);
+    background-size: cover;
+  }
+}
+
+@keyframes notValid {
+  0% {
+    background-color: red;
+  }
+  50% {
+    background-color: white;
+  }
+  /* 90% {background-color: white;} */
+  100% {
+    background-color: red;
+  }
+}
+.hidden {
+  visibility: hidden;
+}
