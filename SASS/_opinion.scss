@@ -1,0 +1,44 @@
+.opinion {
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  height: 25vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @include lg {
+    height: 40vh;
+  }
+  &__header {
+    font-size: 2rem;
+    margin: 20px;
+    color: $dark-green;
+  }
+  &__slider {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0 30px;
+  }
+}
+.slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  height: 100%;
+  // top: 50%;
+  &__text {
+    display: flex;
+    text-align: center;
+    padding: 0 30px;
+    // margin-bottom: 20px;
+  }
+  &__author {
+    display: flex;
+    // margin-bottom: 10px;
+  }
+}

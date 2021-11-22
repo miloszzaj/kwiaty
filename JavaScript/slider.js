@@ -3,7 +3,7 @@ showSlides();
 
 function showSlides() {
   let i;
-  const slides = document.getElementsByClassName("slides");
+  const slides = document.getElementsByClassName("slide");
   // const dots
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
@@ -14,5 +14,5 @@ function showSlides() {
   }
 
   slides[slideIndex - 1].style.display = "flex";
-  setTimeout(showSlides, 2000);
+  setTimeout(showSlides, 5000);
 }

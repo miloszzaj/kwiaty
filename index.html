@@ -22,18 +22,9 @@
     />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
 
-    <link rel="stylesheet" href="/SASS/nav.css" />
-    <link rel="stylesheet" href="/SASS/aboutMe.css" />
-    <link rel="stylesheet" href="/SASS/myClients.css" />
-    <link rel="stylesheet" href="/SASS/contact.css" />
-    <link rel="stylesheet" href="/SASS/footer.css" />
-
-    <link rel="stylesheet" href="/css/root.css" />
     <link rel="stylesheet" href="/css/slider.css" />
 
-    <link rel="stylesheet" href="/SASS/index.css" />
-
-    k
+    <link rel="stylesheet" href="./SASS/index.css" />
   </head>
 
   <body>
@@ -59,171 +50,169 @@
       <div class="header__none"></div>
       <h1 class="header__catchword">Najpiękniejsze kwiaty w okolicy</h1>
     </header>
-    <main>
-      <!-- about me -->
+    <div class="wrapper">
+      <main>
+        <!-- about me -->
 
-      <section class="aboutMe" id="aboutMe">
-        <div class="aboutMe__container">
-          <h2 class="aboutMe__container--header">Na rynku od 1970 roku</h2>
-          <span class="aboutMe__container--text"
-            >Jesteśmy zawsze skupieni na jednej rzeczy: zadowolenie klienta...
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur
-            asperiores saepe ex in nisi possimus minima aliquam atque magni
-            molestias facere maxime natus, perspiciatis tempore ea tenetur
-            accusamus quisquam exercitationem?Lorem ipsum dolor, sit amet
-            consectetur adipisicing elit. Debitis voluptatibus, alias,
-            distinctio harum, ipsa nam officiis qui velit facilis excepturi
-            facere. Pariatur earum vero sed unde nihil ratione accusantium
-            eaque?
-          </span>
-        </div>
-        <img class="aboutMe__photo" src="/img/aboutMePhoto.jpg" alt="tom" />
-      </section>
-
-      <!-- my clients -->
-
-      <section class="myClients" id="myClients">
-        <div class="myClients__left">
-          <div class="myClients__left--up">
-            <p class="myClients__left--up--header">Moi klienci</p>
-          </div>
-          <div class="myClients__left--down">
-            Możesz nas spotkać na rynkach w całym powiecie ;P
-          </div>
-        </div>
-        <div class="myClients__right">
-          <h2 class="myClients__right--header">
-            Współpracujemy z małymi i dużymi
-          </h2>
-          <p class="myClients__right--text">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos
-            quisquam, numquam in perferendis consequuntur provident facere sit
-            iusto, amet eius omnis ducimus praesentium, vero totam corrupti
-            animi reiciendis error dolorem? Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Necessitatibus debitis harum
-            doloremque porro blanditiis officiis qui, impedit cum ullam hic
-            ipsum culpa eius soluta sequi aliquam magnam quia, in dicta!
-          </p>
-        </div>
-      </section>
-
-      <!-- offer -->
-
-      <section class="offer" id="offerContainer">
-        <div class="offer__photo"></div>
-        <div class="offer__container">
-          <h1 class="offer__container--header">Asortyment</h1>
-          <span class="offer__container--text"
-            >Zapraszam do zapoznania się z moją ofertą. Kliknij w przycisk
-            poniżej aby zobaczyć asortyment
-          </span>
-          <button
-            onclick="location.href='/oferta.html'"
-            type="button"
-            class="offer__button"
-          >
-            Moja Oferta
-          </button>
-        </div>
-      </section>
-
-      <!-- opinion -->
-
-      <section class="opinionContainer">
-        <div class="slidesContainer">
-          <div class="slides">
-            <h1>Super kwiatki, kolorowo i pachnąco</h1>
-            <p class="opinionAuthor">- Kłapouchy Kowalski</p>
-          </div>
-          <div class="slides">
-            <h1>
-              Bardzo smaczne i w ogóle. <br />Lorem ipsum, dolor sit amet
+        <section class="aboutMe" id="aboutMe">
+          <div class="aboutMe__container">
+            <h1 class="aboutMe__container--header">Na rynku od 1970 roku</h1>
+            <span class="aboutMe__container--text"
+              >Jesteśmy zawsze skupieni na jednej rzeczy: zadowolenie klienta...
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur
+              asperiores saepe ex in nisi possimus minima aliquam atque magni
+              molestias facere maxime natus, perspiciatis tempore ea tenetur
+              accusamus quisquam exercitationem?Lorem ipsum dolor, sit amet
               consectetur adipisicing elit.
-            </h1>
-            <p class="opinionAuthor">- Ernest Bimbrownik</p>
+            </span>
           </div>
-          <div class="slides">
-            <h1>Można wypchać tym lisa - polecam</h1>
-            <p class="opinionAuthor">- Kubus Uszatek z żoną</p>
+          <img class="aboutMe__photo" src="/img/aboutMePhoto.jpg" alt="tom" />
+        </section>
+
+        <!-- my clients -->
+
+        <section class="myClients" id="myClients">
+          <div class="one">
+            <div class="one__photo">
+              <p class="one__header">Moi klienci</p>
+            </div>
+            <div class="one__text">
+              Możesz nas spotkać na rynkach w całym powiecie ;P
+            </div>
           </div>
-        </div>
-      </section>
-
-      <!-- contact -->
-
-      <section class="contact" id="contactContainer">
-        <div class="contact__left">
-          <form
-            action="https://formspree.io/f/mwkwddel"
-            method="POST"
-            method="post"
-          >
-            <p class="contact__left--header">
-              Napisz, jeśli masz jakies pytania
+          <div class="two">
+            <h1 class="two__header">Współpracujemy z małymi i dużymi</h1>
+            <p class="two__text">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos
+              quisquam, numquam in perferendis consequuntur provident facere sit
+              iusto, amet eius omnis ducimus praesentium, vero totam corrupti
+              animi reiciendis error dolorem? Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Necessitatibus debitis harum
+              doloremque porro blanditiis officiis qui, impedit cum ullam hic
+              ipsum culpa eius soluta sequi aliquam magnam quia, in dicta!
             </p>
-            <div class="contact__left--emailName">
-              <label for="name">
-                <input
-                  class="contact__left--emailName--item name"
-                  type="text"
-                  placeholder="Name"
-                  id="name"
-                  name="name"
-                  required
-                />
-                <div class="contact__left--emailName--statusName hidden">
-                  wpisz poprawne imię
-                </div>
-              </label>
-
-              <label for="email">
-                <input
-                  class="contact__left--emailName--item email"
-                  type="email"
-                  placeholder="Email"
-                  id="email"
-                  name="email"
-                  required
-                />
-                <div class="contact__left--emailName--statusEmail hidden">
-                  wpisz poprawny email
-                </div>
-              </label>
-            </div>
-
-            <div class="contact__left--message">
-              <label for="message">
-                <textarea
-                  class="contact__left--message--submit"
-                  placeholder="Message..."
-                  name="message"
-                  required
-                ></textarea>
-              </label>
-              <button
-                class="contact__left--message--btn"
-                type="submit"
-                value="Submit"
-              >
-                Wyślij
-              </button>
-            </div>
-          </form>
-        </div>
-        <div class="contact__right"></div>
-      </section>
-
-      <!-- map  -->
-
-      <section>
-        <div class="map" id="mapOSM">
-          <div id="popup" class="ol-popup map__popup">
-            <a href="#" id="popup-closer" class="ol-popup-closer"></a>
-            <div id="popup-content"></div>
           </div>
-        </div>
-      </section>
-    </main>
+        </section>
+
+        <!-- offer -->
+
+        <section class="offer" id="offerContainer">
+          <div class="offer__photo">aaa</div>
+          <div class="offer__container">
+            <h1 class="offer__container--header">Asortyment</h1>
+            <span class="offer__container--text"
+              >Zapraszam do zapoznania się z moją ofertą. Kliknij w przycisk
+              poniżej aby zobaczyć asortyment
+            </span>
+            <button
+              onclick="location.href='/oferta.html'"
+              type="button"
+              class="offer__button"
+            >
+              Moja Oferta
+            </button>
+          </div>
+        </section>
+
+        <!-- opinion -->
+
+        <section class="opinion">
+          <h1 class="opinion__header">Opinie</h1>
+          <div class="opinion__slider">
+            <div class="slide">
+              <h1 class="slide__text">Super kwiatki, kolorowo i pachnąco</h1>
+              <p class="slide_author">- Kłapouchy Kowalski</p>
+            </div>
+            <div class="slide">
+              <h1 class="slide__text">
+                Bardzo smaczne i w ogóle. <br />Lorem ipsum, dolor sit amet
+                consectetur adipisicing elit jwbcjibwe ncokw necoiwje f nwdconwd
+                mdcpkw dpjc pwjdp jwejw' p'oiwj c'pjwdp w wjd jw pcwpdj pw wdjp'
+                wdpj pwj p.
+              </h1>
+              <p class="slide__author">- Ernest Bimbrownik</p>
+            </div>
+            <div class="slide">
+              <h1 class="slide__text">
+                Można wypchać tym lisa - polecam. kcnweoc eckdnciow coijwocnow
+                co oweioch oijo2ijc oiwjc n2 cn2o icoi
+              </h1>
+              <p class="slide_author">- Kubus Uszatek z żoną</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- contact -->
+
+        <section class="contact" id="contactContainer">
+          <div class="form">
+            <form
+              class="form__container"
+              action="https://formspree.io/f/mwkwddel"
+              method="POST"
+              method="post"
+            >
+              <p class="form__header">Napisz, jeśli masz jakies pytania</p>
+              <div class="form__labels">
+                <label for="name">
+                  <input
+                    class="form__input name"
+                    type="text"
+                    placeholder="Name"
+                    id="name"
+                    name="name"
+                    required
+                  />
+                  <div class="form__input--statusN hidden">
+                    wpisz poprawne imię
+                  </div>
+                </label>
+
+                <label for="email">
+                  <input
+                    class="form__input email"
+                    type="email"
+                    placeholder="Email"
+                    id="email"
+                    name="email"
+                    required
+                  />
+                  <div class="form__input--statusE hidden">
+                    wpisz poprawny email
+                  </div>
+                </label>
+              </div>
+
+              <div class="message">
+                <label class="message__label" for="message">
+                  <textarea
+                    class="message__textarea"
+                    placeholder="Message..."
+                    name="message"
+                    required
+                  ></textarea>
+                </label>
+                <button class="message__btn" type="submit" value="Submit">
+                  Wyślij
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="contact__photo"></div>
+        </section>
+
+        <!-- map  -->
+
+        <section>
+          <div class="map" id="mapOSM">
+            <div id="popup" class="ol-popup map__popup">
+              <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+              <div id="popup-content"></div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
 
     <!-- footer -->
 
@@ -231,10 +220,11 @@
       <div class="footer">
         <div class="footer__phone">Zadzwoń: 123 456 789</div>
         <div class="footer__adress">
-          Iłowo-Osada 13-240, ul. Śmaka i Owaka 3/4
+          Iłowo-Osada 13-240
+          <br />ul. Śmaka i Owaka 3/4
         </div>
+        <div class="footer__copy">&copy; Ogrodnictwo Tom C.</div>
       </div>
-      <div class="footer__copy">&copy; Ogrodnictwo Tom C.</div>
     </footer>
 
     <script src="/JavaScript/nav.js"></script>

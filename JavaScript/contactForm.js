@@ -1,14 +1,10 @@
-const submitBtn = document.querySelector(".contact__left--message--btn");
+const submitBtn = document.querySelector(".message__btn");
 
 const email = document.querySelector(".email");
-const statusEmail = document.querySelector(
-  ".contact__left--emailName--statusEmail"
-);
+const statusEmail = document.querySelector(".form__input--statusE");
 
 const clientName = document.querySelector(".name");
-const statusName = document.querySelector(
-  ".contact__left--emailName--statusName"
-);
+const statusName = document.querySelector(".form__input--statusN");
 
 const sendContactForm = function (e) {
   e.preventDefault();
