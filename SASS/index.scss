@@ -21,6 +21,7 @@ html {
   font-family: "Montserrat", sans-serif;
   background-color: $background-color;
   scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 
 .wrapper {

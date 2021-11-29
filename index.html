@@ -28,12 +28,12 @@
   </head>
 
   <body>
+    <div class="nav__hamburger">
+      <div class="nav__hamburger--line line_1"></div>
+      <div class="nav__hamburger--line line_2"></div>
+      <div class="nav__hamburger--line line_3"></div>
+    </div>
     <nav class="nav">
-      <div class="nav__hamburger">
-        <div class="nav__hamburger--line line_1"></div>
-        <div class="nav__hamburger--line line_2"></div>
-        <div class="nav__hamburger--line line_3"></div>
-      </div>
       <div class="nav__list">
         <a class="nav__list--link" href="#aboutMe">o mnie</a>
         <a class="nav__list--link" href="#myClients">moi klienci</a>
@@ -57,16 +57,18 @@
         <section class="aboutMe" id="aboutMe">
           <div class="aboutMe__container">
             <h1 class="aboutMe__container--header">Na rynku od 1970 roku</h1>
-            <span class="aboutMe__container--text"
-              >Jesteśmy zawsze skupieni na jednej rzeczy: zadowolenie klienta...
+            <div class="aboutMe__container--text">
+              Jesteśmy zawsze skupieni na jednej rzeczy: zadowolenie klienta...
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur
               asperiores saepe ex in nisi possimus minima aliquam atque magni
               molestias facere maxime natus, perspiciatis tempore ea tenetur
               accusamus quisquam exercitationem?Lorem ipsum dolor, sit amet
               consectetur adipisicing elit.
-            </span>
+            </div>
           </div>
-          <img class="aboutMe__photo" src="/img/aboutMePhoto.jpg" alt="tom" />
+          <div class="aboutMe__photo">
+            <img class="xxx" src="/img/aboutMePhoto.jpg" alt="tom" />
+          </div>
         </section>
 
         <!-- my clients -->
@@ -87,9 +89,7 @@
               quisquam, numquam in perferendis consequuntur provident facere sit
               iusto, amet eius omnis ducimus praesentium, vero totam corrupti
               animi reiciendis error dolorem? Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Necessitatibus debitis harum
-              doloremque porro blanditiis officiis qui, impedit cum ullam hic
-              ipsum culpa eius soluta sequi aliquam magnam quia, in dicta!
+              consectetur adipisicing elit. Necessitatibus
             </p>
           </div>
         </section>
